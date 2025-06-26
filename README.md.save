@@ -1,0 +1,51 @@
+# Twitter Trend Analysis
+
+This project analyzes keyword and sentiment trends in tweets from Jan–June 2025 using PySpark and Hadoop.
+
+
+# Twitter Sentiment Analysis — Sentiment140
+
+This project uses the **Sentiment140** dataset to build a machine learning model that classifies tweets as **positive** or **negative**.
+
+## 📊 Objective
+
+Train and evaluate a sentiment classifier on real-world Twitter data, then use it to predict the sentiment of new, unseen tweets.
+
+## 🗃 Dataset
+
+- Source: [Sentiment140 (Kaggle)](https://www.kaggle.com/datasets/kazanova/sentiment140)
+- Size: 1.6 million tweets  
+- Each tweet is labeled as:
+  - `0` → Negative
+  - `4` → Positive
+
+## ⚙️ Process
+
+1. **Preprocessing:**
+   - Removed mentions, URLs, punctuation, numbers
+   - Lowercased text
+   - Removed extra spaces
+
+2. **Vectorization:**
+   - Used `TfidfVectorizer` to transform tweets into numerical features
+
+3. **Model:**
+   - Logistic Regression classifier
+   - Achieved ~77% accuracy on the test set
+
+4. **Prediction Function:**
+   - Includes support for predicting sentiment of any custom tweet
+   - Also returns model confidence (probability)
+
+## 📦 Requirements
+
+- pandas  
+- scikit-learn  
+- matplotlib  
+- wordcloud  
+- nltk (optional, if stopwords used)
+
+Install with:
+
+```bash
+pip install -r requirements.txt
