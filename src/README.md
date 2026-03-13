@@ -40,8 +40,15 @@ README.md
 - Visualizations reveal clear hype spikes for meme stocks
 
 ## Visual Outputs
-- `reports/ticker_trends.png` — shows daily mentions of tracked tickers  
-- `reports/ticker_sentiment_heatmap.png` — heatmap of sentiment per ticker
+
+### Ticker Trends
+![Ticker Trends](reports/ticker_trends.png)
+
+### Ticker Sentiment Heatmap
+![Ticker Sentiment Heatmap](reports/ticker_sentiment_heatmap.png)
+
+### Most Bullish vs Most Bearish Stocks
+![Bullish vs Bearish](reports/bullish_vs_bearish.png)
 
 ## Future Improvements
 - Real-time Reddit data ingestion
