@@ -63,6 +63,13 @@ Generated charts and visualizations
 - Social media hype cycles can be visualized using ticker mentions
 
 ---
+## Visual Outputs
+
+### Ticker Trends
+![Ticker Trends](reports/ticker_trends.png)
+
+### Ticker Sentiment Heatmap
+![Ticker Sentiment Heatmap](reports/ticker_sentiment_heatmap.png)
 
 ## Example Visualization
 
