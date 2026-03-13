@@ -1,58 +1,78 @@
-# Twitter Trend Analysis
+# WallStreetBets Sentiment & Stock Trend Analysis
 
-This project analyzes keyword and sentiment trends in tweets from Jan–June 2025 using PySpark and Hadoop.
+## Project Overview
 
-# Twitter Sentiment Analysis — Sentiment140
+This project analyzes Reddit posts from the WallStreetBets community to understand retail investor sentiment and stock discussion trends.
 
-This project uses the **Sentiment140** dataset to build a machine learning model that classifies tweets as **positive** or **negative**.
+Using natural language processing (NLP), the project:
 
-## 📊 Objective
+- Cleans and processes social media text data
+- Performs sentiment analysis on posts
+- Identifies the most discussed stocks
+- Visualizes how stock hype evolves over time
 
-Train and evaluate a sentiment classifier on real-world Twitter data, then use it to predict the sentiment of new, unseen tweets.
+The dataset contains over 190,000 WallStreetBets posts.
 
-## 🗃 Dataset
+---
 
-- Source: [Sentiment140 (Kaggle)](https://www.kaggle.com/datasets/kazanova/sentiment140)
-- Size: 1.6 million tweets  
-- Each tweet is labeled as:
-  - `0` → Negative
-  - `4` → Positive
+## Technologies Used
 
-## ⚙️ Process
+- Python
+- Pandas
+- Matplotlib
+- VADER Sentiment Analysis
+- WordCloud
+- Regular Expressions (Regex)
 
-1. **Preprocessing:**
-   - Removed mentions, URLs, punctuation, numbers
-   - Lowercased text
-   - Removed extra spaces
+---
 
-2. **Vectorization:**
-   - Used `TfidfVectorizer` to transform tweets into numerical features
+## Project Structure
 
-3. **Model:**
-   - Logistic Regression classifier
-   - Achieved ~77% accuracy on the test set
+data/  
+Raw and processed datasets
 
-4. **Prediction Function:**
-   - Includes support for predicting sentiment of any custom tweet
-   - Also returns model confidence (probability)
+src/  
+Python scripts for data processing and analysis
 
-## 📦 Requirements
+notebooks/  
+Exploratory analysis
 
-- pandas  
-- scikit-learn  
-- matplotlib  
-- wordcloud  
-- nltk (optional, if stopwords used)
+reports/  
+Generated charts and visualizations
 
-Install with:
+---
 
-```bash
-pip install -r requirements.txt
+## Analysis Pipeline
 
-predict_sentiment_with_proba("I love this app, but the update ruined it!")
-# Output: ('Negative', 0.78)
+1. Load Reddit dataset
+2. Clean text data
+3. Perform sentiment analysis
+4. Visualize sentiment distribution
+5. Analyze sentiment trends over time
+6. Detect stock ticker mentions
+7. Identify most discussed stocks
+8. Visualize stock hype trends
 
+---
 
- Note
+## Key Findings
 
-This project was completed using traditional machine learning, not deep learning or transformers. It does not use user location, hashtags, or emoji context. For richer sentiment or trend analysis, a Spark or AWS-powered version may be considered later.
+- GameStop (GME) dominates WallStreetBets discussions
+- AMC is the second most discussed stock
+- Retail investor sentiment fluctuates significantly over time
+- Social media hype cycles can be visualized using ticker mentions
+
+---
+
+## Example Visualization
+
+See `reports/ticker_trends.png` for stock mention trends over time.
+
+---
+
+## Future Improvements
+
+- Real-time Reddit data ingestion
+- AWS + PySpark pipeline for large-scale processing
+- Advanced NLP techniques (topic modeling)
+- Sentiment analysis per stock ticker
